@@ -3,6 +3,7 @@
   justify-content: flex-end;
   margin: 20px;
   align-items: center;
+  cursor: pointer;
 }
 
 .login-button div {
@@ -49,5 +50,14 @@
 
 .menu-search .menu-search__icon {
   position: absolute;
-  right: 150px;
+  right: 160px;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.product-img {
+  display: flex;
+  justify-content: flex-end;
 }

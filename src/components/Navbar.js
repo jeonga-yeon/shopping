@@ -1,8 +1,10 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const meneList = [
@@ -15,11 +17,15 @@ const Navbar = () => {
     "Save",
     "지속가능성",
   ];
+  const navigate = useNavigate();
+  const goToLogin = () => {
+    navigate("/login");
+  };
   return (
     <div>
       <div>
-        <div className="login-button">
-          <FontAwesomeIcon icon={faUser} />
+        <div className="login-button" onClick={goToLogin}>
+          <FontAwesomeIcon icon={faUser} className="login-icon" />
           <div>로그인</div>
         </div>
       </div>
