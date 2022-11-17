@@ -10,7 +10,6 @@ const ProductDetail = () => {
     let url = `http://localhost:5000/products/${id}`;
     let response = await fetch(url);
     let data = await response.json();
-    console.log(data);
     setProduct(data);
   };
 
